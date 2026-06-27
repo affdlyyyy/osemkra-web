@@ -302,6 +302,99 @@
             margin: 0;
             position: relative;
         }
+
+        /* ==========================================
+           TAMPILAN SELULER (RESPONSIF GLOBAL)
+           ========================================== */
+        @media screen and (max-width: 768px) {
+            /* 1. NAVIGASI (Dibuat bertumpuk dan rapi) */
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 5%;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .nav-links a {
+                margin: 5px 10px;
+                font-size: 13px;
+            }
+            .nav-actions {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 10px;
+            }
+
+            /* 2. HERO SECTION (Teks ke tengah, dikecilkan) */
+            .hero {
+                flex-direction: column;
+                padding: 60px 5%;
+                text-align: center;
+                min-height: auto;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .hero-text h1 {
+                font-size: 36px; /* Dikecilkan dari 64px */
+                margin-bottom: 15px;
+            }
+            .hero-text p {
+                font-size: 14px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+            }
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+            }
+            .hero-divider {
+                margin: 0 auto 30px auto; /* Posisikan garis ke tengah */
+            }
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .scroll-down {
+                display: none; /* Sembunyikan di HP agar tidak mengganggu usapan layar */
+            }
+
+            /* 3. SECTION KONTEN UMUM (Filosofi & Teks) */
+            .section-container, .logo-philosophy, .organizers-section {
+                padding: 60px 5%;
+            }
+            .content-grid {
+                grid-template-columns: 1fr; /* Paksa jadi 1 kolom ke bawah */
+                gap: 40px;
+            }
+            .content-text {
+                order: 2; 
+                text-align: center;
+            }
+            .content-text h2 {
+                font-size: 28px;
+            }
+            .illustration-canvas {
+                order: 1; /* Gambar selalu muncul di atas teks pada HP */
+            }
+
+            /* 4. MASKOT (Siddhi & Sisya berbaris ke bawah) */
+            .maskot-duo-container {
+                grid-template-columns: 1fr; /* Dari 2 kolom menjadi 1 kolom */
+                gap: 30px;
+            }
+            #maskot .illustration-canvas {
+                max-width: 250px; /* Cegah kanvas maskot terlalu raksasa di layar HP */
+                margin: 0 auto; /* Posisi ke tengah */
+            }
+        }
     </style>
 </head>
 <body>
